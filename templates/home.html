@@ -1,0 +1,45 @@
+{# simplified code #}
+
+{# import base.html to this page #}
+
+{# {% extends 'base.html' %}   {# import base.html #}
+{# {% block content %}         {# we want two headings under the body so write headings between block content #}
+{# <h1>Hello danish k</h1> #}
+{# <h1>Hello {{ name }} </h1> #}
+{# {% endblock %} #}
+
+{# Normal codes #}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avodha</title>
+</head>
+<body style="background-color: cyan">
+
+<h1>Hello danish k</h1>
+to pass value using jinja format
+<h1>Hello {{ name }}</h1>
+
+{# --------------------------- django value passing using GET method ------------------------------- #}
+
+<form action="add" method="POST">
+    {% csrf_token %}
+    Number1<input type="text" name="num1"><br>
+    Number2<input type="text" name="num2"><br>
+{#we want to move next page while clicking submit button    #}
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
